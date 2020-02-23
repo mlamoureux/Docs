@@ -1,8 +1,8 @@
 Creating Documentation
 ======================
 
-Using  Read The Docs
-^^^^^^^^^^^^^^^^^^^^
+Using Read The Docs
+===================
 
 I'm using a system called Read The Docs. You can read about it here ar: [readthedocs.org](https://readthedocs.org/)
 
@@ -37,7 +37,7 @@ Don't forget to do a pip install, to get the software. You only need to do this 
 
 - pip install sphinx
 
-(On a Max, you might need to do install Python3 and use pip3. YOu may also need to install XCode developer tools. See next section.)
+(On a Mac, you might need to do install Python3 and use pip3. YOu may also need to install XCode developer tools. See next section.)
 
 Now, create a new directory  (folder) somewhere on your hard drive. From the terminal, cd into that directory, then  run quickstart to set things up with Sphinx.
 
@@ -45,4 +45,50 @@ Now, create a new directory  (folder) somewhere on your hard drive. From the ter
 - sphinx-quickstart
 
 
-This will create several files in the current directory. IN ths new "source" directory is a file called index.rst, which you will list the files you want compiled into the documentation. You don't need to list the file extension. You do have to get the spacing right. 
+This will create several files in the current directory. In ths new "source" directory is a file called index.rst, which you will list the files you want compiled into the documentation. You don't need to list the file extension. You do have to get the spacing right. 
+
+The files you creae, like ChapterOne.md, ChapterTwo.md etc. can be written in Markdown. Use whatever editor you like. Once they are written, and the file name put into index.rst, you can make the webpage.
+
+CD (change directory) back into thatDirectory, and run
+
+- make html
+
+This will then create a webpage for the book that you can open with
+
+- open build/html/index.html
+
+Or use your browser to open it directly. 
+
+Using Github
+============
+
+You can push this all to github, for public storage.
+
+Create a public repo on your github account, clone it onto your computer, then copu you Docs folder into this new, cloned directly. Then do the usual:
+
+- git status
+- git add *
+- git commit -m "first commit of documentation"
+- git push origin master
+
+This last push, will save the files out on the public repo.
+
+To enable automatic builds, in your github account go to "Settings", look for "Webhooks" and pick the one for ReadTheDocs.
+
+Hosting your docs in public - ReadThe Docs
+====================================
+
+Set up an account on ReadTheDocs.org
+
+Then Import a New Project, using their menu items. It will ask you to find your Github account, which you should do. Then select the repo that holds the documentation you want to use. 
+
+Then build it. Look out for errors.
+
+Errors
+======
+
+One error I got was that the build failed, because it could not find a file contents.rst. The solution is to edit the config file conf.py, and add the line
+
+``
+master_doc = 'index'
+``
