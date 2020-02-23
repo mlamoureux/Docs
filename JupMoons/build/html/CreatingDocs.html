@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Creating Documentation &#8212; JupMoons 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using PIP/make on a Mac." href="Pip.html" />
+    <link rel="prev" title="Welcome to JupMoons’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="creating-documentation">
+<h1>Creating Documentation<a class="headerlink" href="#creating-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-read-the-docs">
+<h2>Using  Read The Docs<a class="headerlink" href="#using-read-the-docs" title="Permalink to this headline">¶</a></h2>
+<p>I’m using a system called Read The Docs. You can read about it here ar: [readthedocs.org](<a class="reference external" href="https://readthedocs.org/">https://readthedocs.org/</a>)</p>
+<p>The idea is simple:</p>
+<ul class="simple">
+<li><p>create a bunch of files</p></li>
+<li><p>push it to your github repo</p></li>
+<li><p>let the Read The Docs system publish it on the web for you.</p></li>
+</ul>
+<p>There is a bit more to it than that. You should first create the documentation set on your own computer, using the Sphinx software. To install Sphinx, you need to run pip from within a terminal window:</p>
+<ul class="simple">
+<li><p>pip install Sphinx</p></li>
+</ul>
+<p>If you plan to use MarkDown as your language, you should also install this extension</p>
+<ul class="simple">
+<li><p>pip install recommonmark</p></li>
+</ul>
+<p>Also, you will have to add the following line to your conf.pu file (once it is created), like this:</p>
+<ul class="simple">
+<li><p>pip install recommonmark</p></li>
+</ul>
+<p>Otherwise, you will be using reStrucutre Text files for the documentation.</p>
+<p>For the advantages of reStrucutured Text (.rst) files over Markdown (.md) files, check out the blog by [www.ericholscher.com/blog](<a class="reference external" href="https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/">https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/</a>)</p>
+<p>For me (MLamoureux), I plan to use Markdown, since that is what I am familiar with.</p>
+</div>
+</div>
+<div class="section" id="using-sphinx">
+<h1>Using Sphinx<a class="headerlink" href="#using-sphinx" title="Permalink to this headline">¶</a></h1>
+<p>Don’t forget to do a pip install, to get the software. You only need to do this once on your system</p>
+<ul class="simple">
+<li><p>pip install sphinx</p></li>
+</ul>
+<p>(On a Max, you might need to do install Python3 and use pip3. YOu may also need to install XCode developer tools. See next section.)</p>
+<p>Now, create a new directory  (folder) somewhere on your hard drive. From the terminal, cd into that directory, then  run quickstart to set things up with Sphinx.</p>
+<ul class="simple">
+<li><p>cd thatDirectory</p></li>
+<li><p>sphinx-quickstart</p></li>
+</ul>
+<p>This will create several files in the current directory. IN ths new “source” directory is a file called index.rst, which you will list the files you want compiled into the documentation. You don’t need to list the file extension. You do have to get the spacing right.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">JupMoons</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-read-the-docs">Using  Read The Docs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#using-sphinx">Using Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pip.html">Using PIP/make on a Mac.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Test.html">Test file</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to JupMoons’s documentation!</a></li>
+      <li>Next: <a href="Pip.html" title="next chapter">Using PIP/make on a Mac.</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Michael Lamoureux.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/CreatingDocs.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
