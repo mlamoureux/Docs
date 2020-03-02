@@ -1,5 +1,5 @@
 Using PIP/make on a Mac.
-========================
+======================== 
 
 Runing Mac OS 10.15.2 (feb 2020). I need PIP in order to install some packages (in particular, Sphinx for creating documnetation). Pip as is, on the Mac, does not seem to run, 
 

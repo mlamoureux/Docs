@@ -13,6 +13,9 @@ Welcome to JupMoons's documentation!
    CreatingDocs
    Pip
    Test
+   MathStuff/math_howTo
+   MathStuff/math_sampleRST
+   MathStuff/math_sampleMD
 
 
 

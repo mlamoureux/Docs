@@ -1,10 +1,16 @@
-Creating Documentation
-======================
+# Creating Documentation
 
-Using Read The Docs
-===================
+This is Michael Lamoureux's documentation on some of the tricky points in using Jupyter notebooks. 
 
-I'm using a system called Read The Docs. You can read about it here ar: [readthedocs.org](https://readthedocs.org/)
+It also documents how to create and post documentation useing Read The Docs, as this is also a bit tricky. 
+
+Read this at [https://docs123455.readthedocs.io](https://docs123455.readthedocs.io). Eventually I will host it under a reasonable name.
+
+
+
+## Using Read The Docs
+
+I'm using a system called Read The Docs. You can read about it here: [readthedocs.org](https://readthedocs.org/)
 
 The idea is simple:
 
@@ -30,8 +36,7 @@ For the advantages of reStrucutured Text (.rst) files over Markdown (.md) files,
 
 For me (MLamoureux), I plan to use Markdown, since that is what I am familiar with. 
 
-Using Sphinx
-============
+## Using Sphinx
 
 Don't forget to do a pip install, to get the software. You only need to do this once on your system
 
@@ -59,8 +64,7 @@ This will then create a webpage for the book that you can open with
 
 Or use your browser to open it directly. 
 
-Using Github
-============
+## Using Github
 
 You can push this all to github, for public storage.
 
@@ -75,8 +79,7 @@ This last push, will save the files out on the public repo.
 
 To enable automatic builds, in your github account go to "Settings", look for "Webhooks" and pick the one for ReadTheDocs.
 
-Hosting your docs in public - ReadThe Docs
-====================================
+## Hosting your docs in public - ReadThe Docs
 
 Set up an account on ReadTheDocs.org
 
@@ -84,8 +87,8 @@ Then Import a New Project, using their menu items. It will ask you to find your 
 
 Then build it. Look out for errors.
 
-Errors
-======
+## Errors
+
 
 One error I got was that the build failed, because it could not find a file contents.rst. The solution is to edit the config file conf.py, and add the line
 

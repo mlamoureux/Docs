@@ -5,38 +5,50 @@
   <head>
     <meta charset="utf-8" />
     <title>Creating Documentation &#8212; JupMoons 0.1 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Using PIP/make on a Mac." href="Pip.html" />
-    <link rel="prev" title="Welcome to JupMoons’s documentation!" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="Welcome to JupMoons’s documentation!" href="index.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Pip.html" title="Using PIP/make on a Mac."
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to JupMoons’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">JupMoons 0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="creating-documentation">
 <h1>Creating Documentation<a class="headerlink" href="#creating-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is Michael Lamoureux’s documentation on some of the tricky points in using Jupyter notebooks.</p>
+<p>It also documents how to create and post documentation useing Read The Docs, as this is also a bit tricky.</p>
+<p>Read this at <a class="reference external" href="https://docs123455.readthedocs.io">https://docs123455.readthedocs.io</a>. Eventually I will host it under a reasonable name.</p>
 <div class="section" id="using-read-the-docs">
-<h2>Using  Read The Docs<a class="headerlink" href="#using-read-the-docs" title="Permalink to this headline">¶</a></h2>
-<p>I’m using a system called Read The Docs. You can read about it here ar: [readthedocs.org](<a class="reference external" href="https://readthedocs.org/">https://readthedocs.org/</a>)</p>
+<h2>Using Read The Docs<a class="headerlink" href="#using-read-the-docs" title="Permalink to this headline">¶</a></h2>
+<p>I’m using a system called Read The Docs. You can read about it here: <a class="reference external" href="https://readthedocs.org/">readthedocs.org</a></p>
 <p>The idea is simple:</p>
 <ul class="simple">
 <li><p>create a bunch of files</p></li>
@@ -56,62 +68,90 @@
 <li><p>pip install recommonmark</p></li>
 </ul>
 <p>Otherwise, you will be using reStrucutre Text files for the documentation.</p>
-<p>For the advantages of reStrucutured Text (.rst) files over Markdown (.md) files, check out the blog by [www.ericholscher.com/blog](<a class="reference external" href="https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/">https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/</a>)</p>
+<p>For the advantages of reStrucutured Text (.rst) files over Markdown (.md) files, check out the blog by <a class="reference external" href="https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/">www.ericholscher.com/blog</a></p>
 <p>For me (MLamoureux), I plan to use Markdown, since that is what I am familiar with.</p>
 </div>
-</div>
 <div class="section" id="using-sphinx">
-<h1>Using Sphinx<a class="headerlink" href="#using-sphinx" title="Permalink to this headline">¶</a></h1>
+<h2>Using Sphinx<a class="headerlink" href="#using-sphinx" title="Permalink to this headline">¶</a></h2>
 <p>Don’t forget to do a pip install, to get the software. You only need to do this once on your system</p>
 <ul class="simple">
 <li><p>pip install sphinx</p></li>
 </ul>
-<p>(On a Max, you might need to do install Python3 and use pip3. YOu may also need to install XCode developer tools. See next section.)</p>
+<p>(On a Mac, you might need to do install Python3 and use pip3. YOu may also need to install XCode developer tools. See next section.)</p>
 <p>Now, create a new directory  (folder) somewhere on your hard drive. From the terminal, cd into that directory, then  run quickstart to set things up with Sphinx.</p>
 <ul class="simple">
 <li><p>cd thatDirectory</p></li>
 <li><p>sphinx-quickstart</p></li>
 </ul>
-<p>This will create several files in the current directory. IN ths new “source” directory is a file called index.rst, which you will list the files you want compiled into the documentation. You don’t need to list the file extension. You do have to get the spacing right.</p>
+<p>This will create several files in the current directory. In ths new “source” directory is a file called index.rst, which you will list the files you want compiled into the documentation. You don’t need to list the file extension. You do have to get the spacing right.</p>
+<p>The files you creae, like ChapterOne.md, ChapterTwo.md etc. can be written in Markdown. Use whatever editor you like. Once they are written, and the file name put into index.rst, you can make the webpage.</p>
+<p>CD (change directory) back into thatDirectory, and run</p>
+<ul class="simple">
+<li><p>make html</p></li>
+</ul>
+<p>This will then create a webpage for the book that you can open with</p>
+<ul class="simple">
+<li><p>open build/html/index.html</p></li>
+</ul>
+<p>Or use your browser to open it directly.</p>
+</div>
+<div class="section" id="using-github">
+<h2>Using Github<a class="headerlink" href="#using-github" title="Permalink to this headline">¶</a></h2>
+<p>You can push this all to github, for public storage.</p>
+<p>Create a public repo on your github account, clone it onto your computer, then copu you Docs folder into this new, cloned directly. Then do the usual:</p>
+<ul class="simple">
+<li><p>git status</p></li>
+<li><p>git add *</p></li>
+<li><p>git commit -m “first commit of documentation”</p></li>
+<li><p>git push origin master</p></li>
+</ul>
+<p>This last push, will save the files out on the public repo.</p>
+<p>To enable automatic builds, in your github account go to “Settings”, look for “Webhooks” and pick the one for ReadTheDocs.</p>
+</div>
+<div class="section" id="hosting-your-docs-in-public-readthe-docs">
+<h2>Hosting your docs in public - ReadThe Docs<a class="headerlink" href="#hosting-your-docs-in-public-readthe-docs" title="Permalink to this headline">¶</a></h2>
+<p>Set up an account on ReadTheDocs.org</p>
+<p>Then Import a New Project, using their menu items. It will ask you to find your Github account, which you should do. Then select the repo that holds the documentation you want to use.</p>
+<p>Then build it. Look out for errors.</p>
+</div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<p>One error I got was that the build failed, because it could not find a file contents.rst. The solution is to edit the config file conf.py, and add the line</p>
+<p><code class="docutils literal notranslate"><span class="pre">master_doc</span> <span class="pre">=</span> <span class="pre">'index'</span></code></p>
+</div>
 </div>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">JupMoons</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#using-read-the-docs">Using  Read The Docs</a></li>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Creating Documentation</a><ul>
+<li><a class="reference internal" href="#using-read-the-docs">Using Read The Docs</a></li>
+<li><a class="reference internal" href="#using-sphinx">Using Sphinx</a></li>
+<li><a class="reference internal" href="#using-github">Using Github</a></li>
+<li><a class="reference internal" href="#hosting-your-docs-in-public-readthe-docs">Hosting your docs in public - ReadThe Docs</a></li>
+<li><a class="reference internal" href="#errors">Errors</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#using-sphinx">Using Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Pip.html">Using PIP/make on a Mac.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Test.html">Test file</a></li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to JupMoons’s documentation!</a></li>
-      <li>Next: <a href="Pip.html" title="next chapter">Using PIP/make on a Mac.</a></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to JupMoons’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Pip.html"
+                        title="next chapter">Using PIP/make on a Mac.</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/CreatingDocs.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -121,33 +161,29 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2020, Michael Lamoureux.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/CreatingDocs.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Pip.html" title="Using PIP/make on a Mac."
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to JupMoons’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">JupMoons 0.1 documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Michael Lamoureux.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
   </body>
 </html>
